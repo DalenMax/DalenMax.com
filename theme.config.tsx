@@ -39,30 +39,30 @@ const config: DocsThemeConfig = {
     );
   },
   project: { link: 'https://github.com/DalenMax/TON-full-course' },
-  useNextSeoProps() {
-    const { frontMatter } = useConfig()
+  //useNextSeoProps() {
+  //  const { frontMatter } = useConfig()
 
-    const { route } = useRouter()
-    const { url, images } = seoConfig.openGraph
+  //  const { route } = useRouter()
+  //  const { url, images } = seoConfig.openGraph
 
-    if (route === '/') {
-      return { titleTemplate: 'Dalen Max - %s' }
-    }
+  //  if (route === '/') {
+  //    return { titleTemplate: 'Dalen Max - %s' }
+  //  }
 
-    const fsRoute = useFSRoute()
-    const category = fsRoute.split('/')[2]
+  //  const fsRoute = useFSRoute()
+  //  const category = fsRoute.split('/')[2]
 
-    const ogUrl = new URL(images)
-    ogUrl.searchParams.set('title', frontMatter.title)
-    if (category) ogUrl.searchParams.set('category', category)
+  //  const ogUrl = new URL(images)
+  //  ogUrl.searchParams.set('title', frontMatter.title)
+  //  if (category) ogUrl.searchParams.set('category', category)
 
-    return {
-      title: frontMatter.title,
-      description: frontMatter.description,
-      titleTemplate: seoConfig.title.template,
-      openGraph: { url, images: [{ url: ogUrl.toString() }] }
-    }
-  },
+  //  return {
+  //    title: frontMatter.title,
+  //    description: frontMatter.description,
+  //    titleTemplate: seoConfig.title.template,
+  //    openGraph: { url, images: [{ url: ogUrl.toString() }] }
+  //  }
+  //},
   docsRepositoryBase: 'https://github.com/DalenMax/TON-full-course',
   sidebar: {
     toggleButton: true
