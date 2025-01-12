@@ -90,7 +90,7 @@ export async function GET(_req: Request, context: { params: Params }) {
                     alignSelf: 'flex-start'
                   }}
                 >
-                  npm i -D @pandacss/dev
+                  TON Blockchain full course | DalenMax.com
                 </div>
               )}
             </div>
