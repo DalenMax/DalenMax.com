@@ -162,13 +162,12 @@ const Container = () => {
             {t.bio}
           </p>
         </div>
-        <div style={{width:500, height: 400, position: 'relative'}}>
+        <div style={{width:500, height: 500, position: 'relative'}}>
           <Image
-            src="/profiles/avatar-2.jpg"
+            src="/profiles/avatar.png"
             fill
             alt="Dalen Max"
-            style={{borderRadius:8}}
-            objectFit='cover'
+            style={{borderRadius: 8, objectFit: 'cover'}}
           />
       </div>
       </div>

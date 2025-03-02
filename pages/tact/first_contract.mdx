@@ -1,0 +1,92 @@
+---
+title: Smart Contract đầu tiên
+---
+# Smart Contract đầu tiên
+
+## 1. Khởi tạo dự án TON
+
+Để tạo một dự án mới, chạy lệnh sau:
+
+```bash
+npm create ton@latest
+```
+
+Sau khi chạy lệnh, chọn **Tact** làm ngôn ngữ phát triển. Sau khi hoàn tất, Blueprint sẽ tạo ra một cấu trúc thư mục dự án có sẵn các tệp cơ bản.
+
+## 2. Cấu trúc thư mục dự án
+
+Dưới đây là cấu trúc thư mục cơ bản được Blueprint tạo ra khi bạn chọn Tact làm ngôn ngữ phát triển:
+
+Giờ hãy phân tích chi tiết mỗi thư mục và tệp trong dự án:
+
+Giả sử mình đặt tên contract là `Main`
+
+### Thư mục `/contracts`
+
+Đây là thư mục chính chứa mã nguồn của smart contract viết bằng ngôn ngữ Tact.
+
+- **main.tact**: Đây là file contract chính của dự án. Tact là ngôn ngữ hướng đối tượng được thiết kế đặc biệt cho TON blockchain, có cú pháp tương tự TypeScript nhưng được tối ưu hóa cho việc phát triển smart contract.
+
+- **imports/**: Thư mục này chứa các module và thư viện có thể tái sử dụng. Bạn có thể tổ chức mã nguồn thành các module khác nhau để dễ quản lý và tái sử dụng.
+
+### Thư mục `/wrappers`
+
+Wrappers là các lớp TypeScript giúp tương tác với smart contract một cách dễ dàng hơn.
+
+- **Main.ts**: Wrapper cho smart contract chính. Các file này định nghĩa các interface và method để giao tiếp với smart contract từ phía client, giúp các nhà phát triển frontend tương tác với contract mà không cần hiểu chi tiết về cấu trúc bên trong.
+
+### Thư mục `/tests`
+
+Thư mục này chứa các test để kiểm tra tính đúng đắn của smart contract.
+
+- **Main.spec.ts**: File test cho smart contract chính. Blueprint sử dụng Jest làm framework testing, giúp bạn viết và chạy các test case đảm bảo smart contract hoạt động chính xác.
+
+- **helpers/**: Các function hỗ trợ cho việc test, như khởi tạo môi trường test, tạo các account test, v.v.
+
+### Thư mục `/scripts`
+
+Chứa các script hữu ích để triển khai và tương tác với smart contract.
+
+- **deployMain.ts**: Script để triển khai smart contract chính lên mạng TON. Bạn có thể chạy script này để deploy contract lên testnet hoặc mainnet.
+
+- **utils/**: Các công cụ tiện ích phục vụ quá trình triển khai và tương tác.
+
+### Thư mục `/build`
+
+Kết quả sau khi biên dịch mã nguồn Tact thành mã máy của TON Virtual Machine (TVM).
+
+- **Main.code**: Mã Fift được biên dịch từ Tact. Đây là mã bytecode sẽ được thực thi trên TVM.
+
+- **Main.compiled.json**: Metadata của smart contract, chứa thông tin về contract như interface, function, v.v.
+
+- **Main.abi.json**: Application Binary Interface (ABI) của smart contract, định nghĩa cách tương tác với contract.
+
+### Các file cấu hình
+
+- **package.json**: Cấu hình dự án Node.js, liệt kê các dependencies và định nghĩa các script.
+
+- **tsconfig.json**: Cấu hình TypeScript, định nghĩa cách biên dịch mã TypeScript.
+
+- **blueprint.config.ts**: Cấu hình cho Blueprint, xác định cách Blueprint build và deploy dự án.
+
+## 3. Quy trình phát triển với Blueprint
+
+  <Steps>
+### Phát triển smart contract
+Viết và chỉnh sửa các file `.tact` trong thư mục `contracts/`
+
+### Biên dịch
+    ```bash
+    npx blueprint build
+    ```
+### Chạy test
+    ```bash
+    npx blueprint test
+    ```
+### Triển khai
+Chạy lệnh `npx blueprint run` để thực thi các script triển khai
+    ```bash
+    npx blueprint run
+    ```
+
+</Steps>

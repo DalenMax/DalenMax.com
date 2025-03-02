@@ -1,0 +1,73 @@
+---
+title: Cài đặt môi trường và extensions
+---
+
+# Cài đặt môi trường và extension - Lập trình TON smart contract
+
+TON (The Open Network) là một blockchain thế hệ mới được thiết kế để xử lý hàng triệu giao dịch mỗi giây. Để phát triển smart contract trên TON, bạn cần cài đặt một số công cụ cần thiết. Bài viết này sẽ hướng dẫn chi tiết cách thiết lập môi trường phát triển và các extension IDE (Integrated Development Environment) để lập trình smart contract trên TON sử dụng Blueprint.
+
+## 1. Cài đặt các công cụ cơ bản
+
+### Node.js và npm
+
+Đầu tiên, bạn cần đảm bảo đã cài đặt Node.js (phiên bản 14 trở lên) và npm:
+
+<Tabs items={['macOs', 'Ubuntu Linux']}>
+  <Tab>
+    ```bash
+    brew install node
+    ```
+  </Tab>
+  <Tab>
+    ```bash
+    sudo apt update
+    sudo apt install nodejs npm
+    ```
+  </Tab>
+</Tabs>
+
+**Windows:**
+- Tải và cài đặt từ [trang chủ Node.js](https://nodejs.org)
+
+Kiểm tra phiên bản đã cài đặt:
+```bash
+node -v
+npm -v
+```
+
+## 2. Cấu hình ví TON
+
+Để triển khai smart contract lên testnet hoặc mainnet, bạn cần cấu hình ví TON:
+
+  <Steps>
+### Tải TON Keeper
+Tải [TON Keeper](https://chromewebstore.google.com/detail/omaabbefbmiijedngplfjmnooppbclkk?utm_source=item-share-cp) từ Chrome Web Store.
+
+Hoặc [tại đây](https://play.google.com/store/apps/details?id=com.ton_keeper&hl=en) nếu bạn đang dùng điện thoại.
+
+### Tạo ví mới và lưu giữ 24 phrase an toàn
+### Import Testnet Account
+Import Testnet acccount bằng 24 phrase mới tạo
+### Lấy testnet
+Lấy một số TON testnet từ [TON Testnet Faucet](https://t.me/testgiver_ton_bot) qua Telegram botLấy TON testet
+### Chuyển tiền để kích hoạt ví
+
+</Steps>
+
+## 3. Cài extensions
+
+Có hai IDE phổ biến để phát triển smart contract trên TON: Visual Studio Code và IntelliJ IDEA.
+
+### Visual Studio Code (VS Code)
+
+Tải và cài đặt [Tact Language Extention](https://marketplace.visualstudio.com/items?itemName=tonstudio.vscode-tact)
+
+### IntelliJ IDEA
+
+Tải và cài đặt [TON plugin](https://plugins.jetbrains.com/plugin/23382-ton)
+
+## Kết luận
+
+Sau khi hoàn thành các bước trên, bạn đã có một môi trường phát triển hoàn chỉnh để xây dựng smart contract trên TON Blockchain sử dụng Blueprint. Môi trường này bao gồm các công cụ để viết, biên dịch, kiểm thử và triển khai smart contract.
+
+Bây giờ bạn có thể bắt đầu phát triển các ứng dụng trên TON Blockchain và tận dụng các tính năng mạnh mẽ mà nó cung cấp. Chúc bạn may mắn với hành trình phát triển blockchain của mình!

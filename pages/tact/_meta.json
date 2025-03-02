@@ -1,5 +1,4 @@
 {
-  "overview": "Overview",
-  "ton-structure": "TON Structure",
-  "reference": "References"
+  "prepare": "Cài đặt môi trường",
+  "first_contract":"Smart Contract đầu tiên"
 }
