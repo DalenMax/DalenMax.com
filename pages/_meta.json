@@ -6,9 +6,14 @@
       "layout": "raw"
     }
   },
-  "docs": {
-    "title": "Docs",
+  "tact": {
+    "title": "TON Tact",
     "type": "page",
-    "href": "/docs"
+    "href": "/tact"
+  },
+  "func": {
+    "title": "TON FunC",
+    "type": "page",
+    "href": "/func"
   }
 }
