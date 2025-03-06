@@ -7,3 +7,4 @@ An Nextra example that contains:
 - Custom theme
 - Custom MDX component provider
 - I18n with default locale prefixed
+- hello
